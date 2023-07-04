@@ -1,5 +1,6 @@
 import './App.css';
-import weatherImage from './Images/weather.jpg'
+// import weatherImage from './Images/weather.jpg'
+import weatherImage from './Images/www.gif'
 import { RxHamburgerMenu } from 'react-icons/rx'
 import { RiSunCloudyLine } from 'react-icons/ri'
 import Sidebar from './components/Sidebar';
@@ -548,13 +549,10 @@ function App() {
                 </div>
               )
             })
-          }
-          
+          }  
         </div>
 
-
-
-    </div>
+      </div>
     </div>
   );
 }
