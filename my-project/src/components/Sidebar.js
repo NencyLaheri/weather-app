@@ -5,21 +5,19 @@ import { FiSearch } from 'react-icons/fi';
 import axios from 'axios';
 
 
-
-
-const Sidebar = ({ setPrecipitation,isSidebarOpen,city,setCity, toggleSidebar,forecast,setForecast }) => {
+const Sidebar = ({setInputValue,inputValue, Details, weatherApi ,setPrecipitation,isSidebarOpen,city,setCity, toggleSidebar,forecast,setForecast }) => {
   console.log("cityyyyyyy",city)
   const [isFocused, setIsFocused] = useState(false);
-  const [inputValue, setInputValue] = useState(city);
+  // const [inputValue, setInputValue] = useState(city);
   const [locationKey, setLocationKey] = useState(null);
   const [value, setValue] = useState('');
   const apiKey = '697AZ3G3FeJrAzgv2RpmmSNuQoTkcFK8';
-  const dtl={
-    cloudy:'',
-    humidity:'',
-    wind:'',
-  };
-  const [Details, setDetails] = useState(dtl);
+  // const dtl={
+  //   cloudy:'',
+  //   humidity:'',
+  //   wind:'',
+  // };
+  // const [Details, setDetails] = useState(dtl);
 
   useEffect(() => { 
     // fetchData()
@@ -128,56 +126,56 @@ const Sidebar = ({ setPrecipitation,isSidebarOpen,city,setCity, toggleSidebar,fo
   // };
   
  
-  const weatherApi=async()=>
-  {
-    try {
-      const apiKey = 'd6c135f0980146ddac955040230307'; 
-      const location = inputValue 
+  // const weatherApi=async()=>
+  // {
+  //   try {
+  //     const apiKey = 'd6c135f0980146ddac955040230307'; 
+  //     const location = inputValue 
 
       
     
-      const response = await axios.get(
-        `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${location}`
-      ).catch(function (error) {
-        if (error.response) {
-          console.log(error.response.data.error.code);
-          alert("No matching location found")
-          // console.log(error.response.status);
-          // console.log(error.response.headers);
-        } else if (error.request) {
-          console.log(error.request);
-        } else {
-          console.log('Error', error.message);
-        }
+  //     const response = await axios.get(
+  //       `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${location}`
+  //     ).catch(function (error) {
+  //       if (error.response) {
+  //         console.log(error.response.data.error.code);
+  //         alert("No matching location found")
+  //         // console.log(error.response.status);
+  //         // console.log(error.response.headers);
+  //       } else if (error.request) {
+  //         console.log(error.request);
+  //       } else {
+  //         console.log('Error', error.message);
+  //       }
        
-      });
-      console.log("--------",response);
+  //     });
+  //     console.log("--------",response);
 
      
-      const weatherData = await response.data;
+  //     const weatherData = await response.data;
     
-      console.log("dataaaaaaaaaaaaaaaaaaaaaa------->>",weatherData);
-      console.log("Weather Data--->>>>>>>>",weatherData.current.condition.text);
-      const precipitation=weatherData.current.condition.text;
-      setPrecipitation(precipitation);
-      const f=weatherData.current.temp_c.toFixed(0);
-      console.log("Temparature->>>>>.",f)
-      setForecast(f);
-      const dt=weatherData.current.cloud;
-      const hm=weatherData.current.humidity;
-      const wd=weatherData.current.wind_kph;
-      console.log("Cloudy------>>>>",dt);
-      console.log("Humidity------>>>>",hm);
-      console.log("Wind------>>>>",wd);
-      setDetails(dtl=> ({cloudy:dt,humidity:hm,wind:wd}));
-      console.log("detailssssssss",Details.cloudy);
-      setCity(weatherData.location.name);
-      // Process and use the weather data as needed
-      // ...
-    } catch (error) {
-      console.error('Error fetching weather data:', error);
-    }
-  }
+  //     console.log("dataaaaaaaaaaaaaaaaaaaaaa------->>",weatherData);
+  //     console.log("Weather Data--->>>>>>>>",weatherData.current.condition.text);
+  //     const precipitation=weatherData.current.condition.text;
+  //     setPrecipitation(precipitation);
+  //     const f=weatherData.current.temp_c.toFixed(0);
+  //     console.log("Temparature->>>>>.",f)
+  //     setForecast(f);
+  //     const dt=weatherData.current.cloud;
+  //     const hm=weatherData.current.humidity;
+  //     const wd=weatherData.current.wind_kph;
+  //     console.log("Cloudy------>>>>",dt);
+  //     console.log("Humidity------>>>>",hm);
+  //     console.log("Wind------>>>>",wd);
+  //     setDetails(dtl=> ({cloudy:dt,humidity:hm,wind:wd}));
+  //     console.log("detailssssssss",Details.cloudy);
+  //     setCity(weatherData.location.name);
+  //     // Process and use the weather data as needed
+  //     // ...
+  //   } catch (error) {
+  //     console.error('Error fetching weather data:', error);
+  //   }
+  // }
 
 
   return (
