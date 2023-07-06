@@ -3,15 +3,36 @@ import { GrClose } from 'react-icons/gr';
 import { FiSearch } from 'react-icons/fi';
 // import feather from 'feather-icons';
 import axios from 'axios';
-
+import { Collapse,initTE } from 'tw-elements';
+import { RiArrowDropDownLine } from 'react-icons/ri';
 
 const Sidebar = ({setInputValue,inputValue, Details, weatherApi ,setPrecipitation,isSidebarOpen,city,setCity, toggleSidebar,forecast,setForecast }) => {
   console.log("cityyyyyyy",city)
+  console.log("details>>>>>>>>>>>>",Details.nextDData);
+  const sizeindex=Details.nextDData.length;
+  console.log("indexxxxxxxxxxx",sizeindex);
   const [isFocused, setIsFocused] = useState(false);
   // const [inputValue, setInputValue] = useState(city);
   const [locationKey, setLocationKey] = useState(null);
   const [value, setValue] = useState('');
   const apiKey = '697AZ3G3FeJrAzgv2RpmmSNuQoTkcFK8';
+  // initTE({ Collapse });
+ 
+  // const [isOpen, setIsOpen] = useState(false);
+
+  // const toggleAccordion = () => {
+  //   setIsOpen(!isOpen);
+  // };
+
+
+  const [activeIndex, setActiveIndex] = useState(null);
+  const [rotateAngle, setRotateAngle] = useState(0);
+
+
+  const toggleAccordion = (index) => {
+    setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
+    setRotateAngle((prevAngle) => (prevAngle === index ? 0 : 180));
+  };
   // const dtl={
   //   cloudy:'',
   //   humidity:'',
@@ -181,9 +202,9 @@ const Sidebar = ({setInputValue,inputValue, Details, weatherApi ,setPrecipitatio
   return (
     <>
    
-    <div className={`bg-gray-300 opacity-90 w-96 h-full absolute top-0 right-0 ease-in duration-500 ${
+    <div className={`bg-gray-300 opacity-90 overflow-y-auto w-96 h-full absolute top-0 right-0 ease-in duration-500 ${
         isSidebarOpen ? 'translate-x-0' : 'translate-x-full'
-      }`}>
+       }`}>
       <div className="text-xl my-2 mx-3 flex justify-end">
         <GrClose onClick={toggleSidebar}/>
       </div>
@@ -209,14 +230,40 @@ const Sidebar = ({setInputValue,inputValue, Details, weatherApi ,setPrecipitatio
           <div>
             <hr className="border-t border-[#5E5E5E]"/>
           </div>
-          <div>
-            <h1 className="text-2xl text-[#3F3F3F] py-10">Weather Details</h1>
+          <div className="py-10">
+            <h1 className="text-2xl text-[#3F3F3F] pb-5">Weather Details</h1>
             <div className="text-[#5E5E5E] space-y-8 text-xl">
               <p className="flex justify-between"><span>Cloudy</span><span>{Details.cloudy}%</span></p>
               <p className="flex justify-between"><span>Humidity</span><span>{Details.humidity}%</span></p>
               <p className="flex justify-between"><span>Wind</span><span>{Details.wind}%</span></p>
-              
             </div>
+          </div>
+
+          <div>
+            <hr className="border-t border-[#5E5E5E]"/>
+          </div>
+          <div className="py-10">
+            <h1 className="text-2xl text-[#3F3F3F] pb-4">Next 5 Days Weather</h1>
+           
+            <div className="space-y-4">
+            {Details.nextDData.slice(1,sizeindex).map((item, index ) => (
+              <div key={item.id}>
+                <button className={`w-full text-[#5E5E5E] hover:text-[#959595] py-2 text-left text-xl ${
+                    activeIndex === index ? 'text-[#959595]' : ''}`} onClick={() => toggleAccordion(index)}>
+                  <div className="flex justify-between">
+                  <span className="flex items-center">{item.date}</span>
+                   <span><RiArrowDropDownLine className="text-4xl"  style={{ transform: `rotate(${activeIndex === index ? rotateAngle : 0}deg)` }}/></span>
+                  </div>
+                  </button>
+                {activeIndex === index && (
+                  <div className="py-2 space-y-5 text-left px-4 text-[#3F3F3F]">
+                    <p>{item.day.condition.text}</p>
+                    <p>{item.day.avgtemp_c}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
           </div>
         </div>
       </div>
