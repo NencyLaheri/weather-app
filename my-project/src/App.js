@@ -69,6 +69,7 @@ function App() {
   ]
 
   const [bImage, setbImage] = useState('');
+  const [ctime, setcTime] = useState('day');
 
   
   useEffect(() => {
@@ -469,195 +470,195 @@ function App() {
       day: [
       {
         weather: "Sunny",
-        img: require("./assets/weatherIcons/night/113.png"),
+        img: require("./assets/weatherIcons/day/113.png"),
       },
       {
         weather: "Partly cloudy",
-        img: require("./assets/weatherIcons/night/116.png"),
+        img: require("./assets/weatherIcons/day/116.png"),
       },
       {
         weather: "Cloudy",
-        img: require("./assets/weatherIcons/night/119.png"),
+        img: require("./assets/weatherIcons/day/119.png"),
       },
       {
         weather: "Overcast",
-        img: require("./assets/weatherIcons/night/122.png"),
+        img: require("./assets/weatherIcons/day/122.png"),
       },
       {
         weather: "Mist",
-        img: require("./assets/weatherIcons/night/143.png"),
+        img: require("./assets/weatherIcons/day/143.png"),
       },
       {
         weather: "Patchy rain possible",
-        img: require("./assets/weatherIcons/night/176.png"),
+        img: require("./assets/weatherIcons/day/176.png"),
       },
       {
         weather: "Patchy snow possible",
-        img: require("./assets/weatherIcons/night/179.png"),
+        img: require("./assets/weatherIcons/day/179.png"),
       },
       {
         weather: "Patchy sleet possible",
-        img: require("./assets/weatherIcons/night/182.png"),
+        img: require("./assets/weatherIcons/day/182.png"),
       },
       {
         weather: "Patchy freezing drizzle possible",
-        img: require("./assets/weatherIcons/night/185.png"),
+        img: require("./assets/weatherIcons/day/185.png"),
       },
       {
         weather: "Thundery outbreaks possible",
-        img: require("./assets/weatherIcons/night/200.png"),
+        img: require("./assets/weatherIcons/day/200.png"),
       },
       {
         weather: "Blowing snow",
-        img: require("./assets/weatherIcons/night/227.png"),
+        img: require("./assets/weatherIcons/day/227.png"),
       },
       {
         weather: "Blizzard",
-        img: require("./assets/weatherIcons/night/230.png"),
+        img: require("./assets/weatherIcons/day/230.png"),
       },
       {
         weather: "Fog",
-        img: require("./assets/weatherIcons/night/248.png"),
+        img: require("./assets/weatherIcons/day/248.png"),
       },
       {
         weather: "Freezing fog",
-        img: require("./assets/weatherIcons/night/260.png"),
+        img: require("./assets/weatherIcons/day/260.png"),
       },
       {
         weather: "Patchy light drizzle",
-        img: require("./assets/weatherIcons/night/263.png"),
+        img: require("./assets/weatherIcons/day/263.png"),
       },
       {
         weather: "Light drizzle",
-        img: require("./assets/weatherIcons/night/266.png"),
+        img: require("./assets/weatherIcons/day/266.png"),
       },
       {
         weather: "Freezing drizzle",
-        img: require("./assets/weatherIcons/night/281.png"),
+        img: require("./assets/weatherIcons/day/281.png"),
       },
       {
         weather: "Heavy freezing drizzle",
-        img: require("./assets/weatherIcons/night/284.png"),
+        img: require("./assets/weatherIcons/day/284.png"),
       },
       {
         weather: "Patchy light rain",
-        img: require("./assets/weatherIcons/night/293.png"),
+        img: require("./assets/weatherIcons/day/293.png"),
       },
       {
         weather: "Light rain",
-        img: require("./assets/weatherIcons/night/296.png"),
+        img: require("./assets/weatherIcons/day/296.png"),
       },
       {
         weather: "Moderate rain at times",
-        img: require("./assets/weatherIcons/night/299.png"),
+        img: require("./assets/weatherIcons/day/299.png"),
       },
       {
         weather: "Moderate rain",
-        img: require("./assets/weatherIcons/night/302.png"),
+        img: require("./assets/weatherIcons/day/302.png"),
       },
       {
         weather: "Heavy rain at times",
-        img: require("./assets/weatherIcons/night/305.png"),
+        img: require("./assets/weatherIcons/day/305.png"),
       },
       {
         weather: "Heavy rain",
-        img: require("./assets/weatherIcons/night/308.png"),
+        img: require("./assets/weatherIcons/day/308.png"),
       },
       {
         weather: "Light freezing rain",
-        img: require("./assets/weatherIcons/night/311.png"),
+        img: require("./assets/weatherIcons/day/311.png"),
       },
       {
         weather: "Moderate or heavy freezing rain",
-        img: require("./assets/weatherIcons/night/314.png"),
+        img: require("./assets/weatherIcons/day/314.png"),
       },
       {
         weather: "Light sleet",
-        img: require("./assets/weatherIcons/night/317.png"),
+        img: require("./assets/weatherIcons/day/317.png"),
       },
       {
         weather: "Moderate or heavy sleet",
-        img: require("./assets/weatherIcons/night/320.png"),
+        img: require("./assets/weatherIcons/day/320.png"),
       },
       {
         weather: "Patchy light snow",
-        img: require("./assets/weatherIcons/night/323.png"),
+        img: require("./assets/weatherIcons/day/323.png"),
       },
       {
         weather: "Light snow",
-        img: require("./assets/weatherIcons/night/326.png"),
+        img: require("./assets/weatherIcons/day/326.png"),
       },
       {
         weather: "Patchy moderate snow",
-        img: require("./assets/weatherIcons/night/329.png"),
+        img: require("./assets/weatherIcons/day/329.png"),
       },
       {
         weather: "Moderate snow",
-        img: require("./assets/weatherIcons/night/332.png"),
+        img: require("./assets/weatherIcons/day/332.png"),
       },
       {
         weather: "Patchy heavy snow",
-        img: require("./assets/weatherIcons/night/335.png"),
+        img: require("./assets/weatherIcons/day/335.png"),
       },
       {
         weather: "Heavy snow",
-        img: require("./assets/weatherIcons/night/338.png"),
+        img: require("./assets/weatherIcons/day/338.png"),
       },
       {
         weather: "Ice pellets",
-        img: require("./assets/weatherIcons/night/350.png"),
+        img: require("./assets/weatherIcons/day/350.png"),
       },
       {
         weather: "Light rain shower",
-        img: require("./assets/weatherIcons/night/353.png"),
+        img: require("./assets/weatherIcons/day/353.png"),
       },
       {
         weather: "Moderate or heavy rain shower",
-        img: require("./assets/weatherIcons/night/356.png"),
+        img: require("./assets/weatherIcons/day/356.png"),
       },
       {
         weather: "Torrential rain shower",
-        img: require("./assets/weatherIcons/night/359.png"),
+        img: require("./assets/weatherIcons/day/359.png"),
       },
       {
         weather: "Light sleet showers",
-        img: require("./assets/weatherIcons/night/362.png"),
+        img: require("./assets/weatherIcons/day/362.png"),
       },
       {
         weather: "Moderate or heavy sleet showers",
-        img: require("./assets/weatherIcons/night/365.png"),
+        img: require("./assets/weatherIcons/day/365.png"),
       },
       {
         weather: "Light snow showers",
-        img: require("./assets/weatherIcons/night/368.png"),
+        img: require("./assets/weatherIcons/day/368.png"),
       },
       {
         weather: "Moderate or heavy snow showers",
-        img: require("./assets/weatherIcons/night/371.png"),
+        img: require("./assets/weatherIcons/day/371.png"),
       },
       {
         weather: "Light showers of ice pellets",
-        img: require("./assets/weatherIcons/night/374.png"),
+        img: require("./assets/weatherIcons/day/374.png"),
       },
       {
         weather: "Moderate or heavy showers of ice pellets",
-        img: require("./assets/weatherIcons/night/377.png"),
+        img: require("./assets/weatherIcons/day/377.png"),
       },
       {
         weather: "Patchy light rain with thunder",
-        img: require("./assets/weatherIcons/night/386.png"),
+        img: require("./assets/weatherIcons/day/386.png"),
       },
       {
         weather: "Moderate or heavy rain with thunder",
-        img: require("./assets/weatherIcons/night/389.png"),
+        img: require("./assets/weatherIcons/day/389.png"),
       },
       {
         weather: "Patchy light snow with thunder",
-        img: require("./assets/weatherIcons/night/392.png"),
+        img: require("./assets/weatherIcons/day/392.png"),
       },
       {
         weather: "Moderate or heavy snow with thunder",
-        img: require("./assets/weatherIcons/night/395.png"),
+        img: require("./assets/weatherIcons/day/395.png"),
       }
       ],
       night: [
@@ -940,28 +941,73 @@ function App() {
       // console.log("weather iconnnnnnnn",daysdata.day);
       // const dateCurrent=weatherData.current.last_updated.split(' ')[1];
       const timeCurrent=weatherData.current.last_updated.split(' ')[1].split(':')[0];
+      
       if(timeCurrent>=5 || timeCurrent<15)
       {
-        const c="day";
+        console.log('settinggggggggg icon',daysdata.day[0].weather);
+      //  seticon(daysdata.day[0].img);
+      //  setcTime('day');
+       daysdata.day.map((item)=>
+       {
+         // console.log("itemmmmmmmm",item);
+        //  console.log("itemmmmmmmmmmmm---->>>>>>>>>>>mmmmm",item)
+        // console.log("dataaaaa->>>>+++++",item.weather);
+         if(item.weather==t)
+         {
+           // const t2=item.img;
+           console.log("weatherrrrrrrrrr",item.weather);
+           console.log("---------------dayyyyyyyyyyy--------------------------");
+          //  console.log("itemmmmmmmmmmm",item.img)
+           // const t2 = item.img.match(/"(.*?)"/)[1];
+           // console.log("dataaaaaaaaaaaa of imageeeeeeeeeeeeee",t2)
+           // console.log("matchedddddddddddddd----------",t);
+           seticon(item.img);
+           console.log("iconnnnnnnn",icon);
+           
+         }
+       })
       }
       else{
-        const c="night";
+        setcTime('night');
+        console.log("elseeeeeeeeeeeeeeeeeeeee")
+        daysdata.night.map((item)=>
+        {
+          // console.log("itemmmmmmmm",item);
+          console.log("itemmmmmmmmmmmm---->>>>>>>>>>>mmmmm",item)
+          if(item.weather==t)
+          {
+            // const t2=item.img;
+            console.log("weatherrrrrrrrrr",item.weather);
+            console.log("----------------nightttt-------------------------");
+            console.log("itemmmmmmmmmmm",item.img)
+            // const t2 = item.img.match(/"(.*?)"/)[1];
+            // console.log("dataaaaaaaaaaaa of imageeeeeeeeeeeeee",t2)
+            // console.log("matchedddddddddddddd----------",t);
+            seticon(item.img);
+            console.log("iconnnnnnnn",icon);
+            
+          }
+        })
       }
       console.log("current time------",timeCurrent)
-      daysdata.day.map((item)=>
-      {
-        // console.log("itemmmmmmmm",item);
-        if(item.weather==t)
-        {
-          // const t2=item.img;
-          console.log("itemmmmmmmmmmm",item.img)
-          // const t2 = item.img.match(/"(.*?)"/)[1];
-          // console.log("dataaaaaaaaaaaa of imageeeeeeeeeeeeee",t2)
-          // console.log("matchedddddddddddddd----------",t);
-          seticon(item.img);
-          console.log("iconnnnnnnn",icon);
-        }
-      })
+      console.log("ccccccccccc",ctime);
+      // daysdata.ctime.map((item)=>
+      // {
+      //   // console.log("itemmmmmmmm",item);
+      //   console.log("itemmmmmmmmmmmm---->>>>>>>>>>>mmmmm",item)
+      //   if(item.weather==t)
+      //   {
+      //     // const t2=item.img;
+      //     console.log("-----------------------------------------");
+      //     console.log("itemmmmmmmmmmm",item.img)
+      //     // const t2 = item.img.match(/"(.*?)"/)[1];
+      //     // console.log("dataaaaaaaaaaaa of imageeeeeeeeeeeeee",t2)
+      //     // console.log("matchedddddddddddddd----------",t);
+      //     seticon(item.img);
+      //     console.log("iconnnnnnnn",icon);
+          
+      //   }
+      // })
       
     } catch (error) {
       console.error('Error fetching weather data:', error);
@@ -1018,20 +1064,41 @@ function App() {
             {
               Details.hData.map((item,index)=>
               {
-                // console.log("---->>>>>----",item.temp_c);
-                let getindex=daysdata.day.findIndex(response=>response.weather==item.condition.text);
-                
+                // console.log("---->>>>>----itemmmmmmmmm--",item);
+                console.log("data for day =========>",Array.isArray(daysdata.day))
+                console.log("data for night ---------->",Array.isArray(daysdata.night))
+                // let getindex=daysdata.findIndex(response=>response.weather==item.condition.text);
+                let getindexDay = -1; // Initialize index for day to -1
+                let getindexNight = -1; // Initialize index for night to -1
+
+                if (Array.isArray(daysdata.day)) {
+                  getindexDay = daysdata.day.findIndex(response => response.weather === item.condition.text);
+                }
+
+                if (Array.isArray(daysdata.night)) {
+                  getindexNight = daysdata.night.findIndex(response => response.weather === item.condition.text);
+                }
                 // console.log("getindexxxxxxxxxxxxxx",getindex);
+                
                 let tm=(item.time).split(' ')[1];
                 let tmm=tm.split(':')[0];
-                // console.log("tm----------------",tmm);
+                console.log("getindexdayyyyy",getindexDay)
+                // console.log("getindexnight",getindexNight)
+                console.log("tm----------------",tm);
+                console.log("tm----------------",tmm);
                 return(
                   <div className="flex flex-col justify-center items-center mx-20">
                     <div class=""></div>
                     <div className="text-center">{tm} {tmm<12 ?"AM" : "PM"}</div>
                     <div className="text-center">{item.temp_c.toFixed(0)}&deg;</div>
-                    
-                    <img src={daysdata.day[getindex].img} alt="" />
+                    {/* <img src={daysdata.day[getindexDay].img} alt="" /> */}
+                    {tmm >= 4 && tmm < 16 ? (
+                      <img src={daysdata.day[getindexDay].img} alt="" />
+                    ) : (
+                     
+                      <img src={daysdata.night[getindexNight].img} alt="" />
+                      
+                    )}
                     <div className="text-center">{item.condition.text}</div>
                   </div>
                 )
